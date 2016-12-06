@@ -1,4 +1,4 @@
-all: count
+all: count 
 
 count: main.o
 	g++ main.o -o count
@@ -6,7 +6,8 @@ count: main.o
 main.o: main.cc
 	g++ -c main.cc
 check: main.o
-	cppcheck main.cc valgrind ./count
+	cppcheck main.cc	
+	valgrind ./count
 doc:
 	doxygen file.txt
 clean:
